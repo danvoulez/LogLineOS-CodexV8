@@ -1,0 +1,3438 @@
+# LogLineOS v8 Master Tasklist (Checkable)
+
+> Auto-generated from `logline_v8_tasklist_enriched (1).json` to provide a reviewable, checkable backlog aligned with the architecture in `Architecture.md`.
+
+## Legend
+- **Milestone**: M0 = Foundations, M1 = Core completeness, M2 = Extended capabilities.
+- **Priority**: P0 (highest) → P2 (lowest).
+- **MVP** indicates inclusion in the launch-critical slice.
+- **Critical Path** tasks unblock downstream items and should be tracked closely.
+
+## Toolchain
+
+- [ ] **L-01 — Grammar (EBNF)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Formalize .lll grammar.
+  - Dependencies: —
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-01.md`
+
+- [ ] **L-02 — Semantics reference**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Types, evaluation rules, errors.
+  - Dependencies: L-01
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-02.md`
+
+- [ ] **L-03 — Parser**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: ANTLR/hand-rolled parser to AST.
+  - Dependencies: L-01
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-03.md`
+
+- [ ] **L-04 — Type checker**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Type inference/validation.
+  - Dependencies: L-02, L-03
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-04.md`
+
+- [ ] **L-06 — IR core**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Lowering from AST; SSA-like if needed.
+  - Dependencies: L-04
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-06.md`
+
+- [ ] **L-20 — EVAL engine**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Direct interpreter for IR.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-20.md`
+
+- [ ] **L-22 — CLI: loglinec/loglinerun**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Build & run toolchain; packaging .lllb.
+  - Dependencies: L-06, L-20
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-22.md`
+
+- [ ] **L-24 — Manifest generator (.lllb)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Create manifests with caps_allow and signatures.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-24.md`
+
+- [ ] **L-25 — Sign/Verify artifacts**
+  - Milestone: `M0` · Priority: `P0` · MVP: `No` · Critical Path: `No` · Effort Points: `5`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W1 ~ 2025-10-12`
+  - Description: ed25519 signing & verification.
+  - Dependencies: L-24, R-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-25.md`
+
+- [ ] **L-19 — AOT-WASM backend**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Emit WASM module from IR.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-19.md`
+
+- [ ] **L-30-1 — Std library primitives #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-1.md`
+
+- [ ] **L-30-10 — Std library primitives #10**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-10.md`
+
+- [ ] **L-30-2 — Std library primitives #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-2.md`
+
+- [ ] **L-30-3 — Std library primitives #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-3.md`
+
+- [ ] **L-30-4 — Std library primitives #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-4.md`
+
+- [ ] **L-30-5 — Std library primitives #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-5.md`
+
+- [ ] **L-30-6 — Std library primitives #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-6.md`
+
+- [ ] **L-30-7 — Std library primitives #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-7.md`
+
+- [ ] **L-30-8 — Std library primitives #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-8.md`
+
+- [ ] **L-30-9 — Std library primitives #09**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Collections, math, datetime, crypto adapters.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-30-9.md`
+
+- [ ] **L-40-1 — Error model & diagnostics #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-1.md`
+
+- [ ] **L-40-2 — Error model & diagnostics #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-2.md`
+
+- [ ] **L-40-3 — Error model & diagnostics #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-3.md`
+
+- [ ] **L-40-4 — Error model & diagnostics #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-4.md`
+
+- [ ] **L-40-5 — Error model & diagnostics #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-5.md`
+
+- [ ] **L-40-6 — Error model & diagnostics #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Pretty errors, codes, hints.
+  - Dependencies: L-06
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-40-6.md`
+
+- [ ] **L-50-1 — Package manager enhancements #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-1.md`
+
+- [ ] **L-50-2 — Package manager enhancements #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-2.md`
+
+- [ ] **L-50-3 — Package manager enhancements #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-3.md`
+
+- [ ] **L-50-4 — Package manager enhancements #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-4.md`
+
+- [ ] **L-50-5 — Package manager enhancements #05**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-5.md`
+
+- [ ] **L-50-6 — Package manager enhancements #06**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-compiler` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Lockfile, reproducible builds, cache.
+  - Dependencies: L-22
+  - Acceptance Criteria:
+    - Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/l-50-6.md`
+
+## Runtime
+
+- [ ] **R-01 — TCB spec & threat model**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Boundary of trusted code; attack surface; threat scenarios; acceptance criteria.
+  - Dependencies: —
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-01.md`
+
+- [ ] **R-02 — Loader/Sandbox (.lllb)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Validate signatures, ABI version, caps_allow; deny-by-default.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-02.md`
+
+- [ ] **R-03 — Hostcalls ABI v1**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Define wire contracts and capability gating for ledger, kv, env, http, ws, crypto.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-03.md`
+
+- [ ] **R-04 — Kernel: ledger.append**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `13`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: High-throughput append-only implementation with receipts.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-04.md`
+
+- [ ] **R-05 — Kernel: kv.get/set**
+  - Milestone: `M0` · Priority: `P0` · MVP: `No` · Critical Path: `No` · Effort Points: `5`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W1 ~ 2025-10-12`
+  - Description: Insert-only semantics where applicable; namespaced by tenant.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-05.md`
+
+- [ ] **R-09 — OIDC/JWT core (LLST/JWKS)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Google-only OIDC; LLST issuing/rotation; JWKS cache.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-09.md`
+
+- [ ] **R-10 — Audit receipts writer**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Append receipts and bind to operations with ids.
+  - Dependencies: R-04
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-10.md`
+
+- [ ] **R-11 — Sandbox syscall denylist**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Harden default deny syscalls.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-11.md`
+
+- [ ] **R-12 — Resource limits (mem/cpu/wall)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Quota per tenant and per run.
+  - Dependencies: R-02, R-08
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-12.md`
+
+- [ ] **R-13 — Determinism rules (AOT vs EVAL)**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: No clock/rand unless provided by env/hostcall.
+  - Dependencies: L-19, L-20
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-13.md`
+
+- [ ] **R-06 — Kernel: ed25519 verify (batch)**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Batch verification support; constant-time primitives.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-06.md`
+
+- [ ] **R-07 — rtlib_wasm (AOT trampoline)**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Minimal runtime for WASM AOT path bridging hostcalls.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-07.md`
+
+- [ ] **R-08 — Rate-limit/quotas enforcer (TCB)**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-runtime` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Token bucket/sliding window hooks exposed to .lll policies.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - All ABI/limits enforced; unit & integration tests; benchmarks meet target.
+    - Security checks pass; receipts emitted when applicable.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/r-08.md`
+
+## Pipeline
+
+- [ ] **TRI-01 — Trajectory Linker**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Chain spans by `this`+time window; create edges.
+  - Dependencies: D-02, D-01
+  - Acceptance Criteria:
+    - Deterministic derivation; idempotent re-runs; throughput baseline met.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/tri-01.md`
+
+- [ ] **TRI-02 — Emit trajectory_edge**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Derived span for edge open/continue.
+  - Dependencies: TRI-01
+  - Acceptance Criteria:
+    - Deterministic derivation; idempotent re-runs; throughput baseline met.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/tri-02.md`
+
+- [ ] **TRI-03 — Auto close trajectory (trajectory_closed)**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Timeout/rule-based close.
+  - Dependencies: TRI-01
+  - Acceptance Criteria:
+    - Deterministic derivation; idempotent re-runs; throughput baseline met.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/tri-03.md`
+
+- [ ] **FEAT-CL-01 — Optional span_cluster pilot (flag)**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Alternate cluster linker under features.cluster.
+  - Dependencies: TRI-01
+  - Acceptance Criteria:
+    - Deterministic derivation; idempotent re-runs; throughput baseline met.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/feat-cl-01.md`
+
+- [ ] **TRI-05 — Trajectory reprocessor (on-demand)**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Rebuild edges/close for a range; idempotent.
+  - Dependencies: TRI-01, TRI-03
+  - Acceptance Criteria:
+    - Deterministic derivation; idempotent re-runs; throughput baseline met.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/tri-05.md`
+
+## Policy
+
+- [ ] **CFG-01 — Tenant config model**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Per-tenant flags, quotas, policies.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-01.md`
+
+- [ ] **P-04 — Capabilities policy**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: .lll gating rules per hostcall id.
+  - Dependencies: R-03
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/p-04.md`
+
+- [ ] **P-05 — RBAC→Capabilities**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Map roles to capabilities per tenant.
+  - Dependencies: P-04, R-09
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/p-05.md`
+
+- [ ] **CFG-FEAT-01 — Feature flags `features.trajectory`/`features.diamond`**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Per-tenant toggles.
+  - Dependencies: CFG-01, API-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-feat-01.md`
+
+- [ ] **CFG-10-1 — Tenant config API & storage #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-1.md`
+
+- [ ] **CFG-10-2 — Tenant config API & storage #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-2.md`
+
+- [ ] **CFG-10-3 — Tenant config API & storage #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-3.md`
+
+- [ ] **CFG-10-4 — Tenant config API & storage #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-4.md`
+
+- [ ] **CFG-10-5 — Tenant config API & storage #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-5.md`
+
+- [ ] **CFG-10-6 — Tenant config API & storage #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CRUD, versioning, audit.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-10-6.md`
+
+- [ ] **CFG-20-1 — Feature flag service #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Evaluate flags per request/tenant.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-20-1.md`
+
+- [ ] **CFG-20-2 — Feature flag service #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Evaluate flags per request/tenant.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-20-2.md`
+
+- [ ] **CFG-20-3 — Feature flag service #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Evaluate flags per request/tenant.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-20-3.md`
+
+- [ ] **CFG-20-4 — Feature flag service #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Evaluate flags per request/tenant.
+  - Dependencies: CFG-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-20-4.md`
+
+- [ ] **CFG-PRF-01 — Perf guardrails for derived events**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Limit derived spans/min, shed load.
+  - Dependencies: OBS-TRI-01
+  - Acceptance Criteria:
+    - Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-prf-01.md`
+
+## Data
+
+- [ ] **D-01 — Span Ledger v1**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Append-only store with partitioning and receipts.
+  - Dependencies: R-04
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-01.md`
+
+- [ ] **D-02 — Ingress Router**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Route inputs to validators and ledger.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-02.md`
+
+- [ ] **D-05 — Validator Chain**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Composable validators in .lll (canonical contract, schema, auth).
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-05.md`
+
+- [ ] **D-10-1 — Canonical schema validators #01**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-1.md`
+
+- [ ] **D-10-10 — Canonical schema validators #10**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-10.md`
+
+- [ ] **D-10-2 — Canonical schema validators #02**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-2.md`
+
+- [ ] **D-10-3 — Canonical schema validators #03**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-3.md`
+
+- [ ] **D-10-4 — Canonical schema validators #04**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-4.md`
+
+- [ ] **D-10-5 — Canonical schema validators #05**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-5.md`
+
+- [ ] **D-10-6 — Canonical schema validators #06**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-6.md`
+
+- [ ] **D-10-7 — Canonical schema validators #07**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-7.md`
+
+- [ ] **D-10-8 — Canonical schema validators #08**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-8.md`
+
+- [ ] **D-10-9 — Canonical schema validators #09**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: who/did/this/when/status/confirmed_by rules.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-10-9.md`
+
+- [ ] **D-20-1 — Router policies & routes #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-1.md`
+
+- [ ] **D-20-2 — Router policies & routes #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-2.md`
+
+- [ ] **D-20-3 — Router policies & routes #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-3.md`
+
+- [ ] **D-20-4 — Router policies & routes #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-4.md`
+
+- [ ] **D-20-5 — Router policies & routes #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-5.md`
+
+- [ ] **D-20-6 — Router policies & routes #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-6.md`
+
+- [ ] **D-20-7 — Router policies & routes #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-7.md`
+
+- [ ] **D-20-8 — Router policies & routes #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Rate classes, priorities, exceptions.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-20-8.md`
+
+- [ ] **D-30 — PII redaction filters**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Configurable redaction before persistence.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-30.md`
+
+- [ ] **D-40 — Backpressure at router**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Queue limits, drop/slow strategies.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-40.md`
+
+- [ ] **D-01A — Columnar projections (light)**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Optional projections for analytics.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Passes validator suite; append-only invariant preserved; receipts linked.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/d-01a.md`
+
+## Quality
+
+- [ ] **QTY-01 — trajectory_quality_score.lll**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Compute score: mass+persistence+verification.
+  - Dependencies: TRI-02, TRI-03
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/qty-01.md`
+
+- [ ] **QTY-02 — quality_meter_v1_1.lll**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `Yes` · Effort Points: `6`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Filter by percentile/threshold; emit diamond_candidate.
+  - Dependencies: QTY-01
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/qty-02.md`
+
+- [ ] **CFG-QLT-01 — Quality policy per tenant**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Weights, min_score, percentile_target.
+  - Dependencies: QTY-01
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/cfg-qlt-01.md`
+
+- [ ] **QTY-03 — dryrun_simulator.lll + CLI `ll quality simulate`**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `Yes` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Dry-run scoring & filtering for debug.
+  - Dependencies: QTY-02
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/qty-03.md`
+
+- [ ] **QTY-04 — Percentile calculator (streaming)**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Approximate quantiles for real-time filtering.
+  - Dependencies: QTY-01
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/qty-04.md`
+
+- [ ] **QTY-05 — Quality dry-run API endpoint**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `Yes` · Effort Points: `13`
+  - Owner: `team-platform` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Expose dry-run via REST/WS for tooling.
+  - Dependencies: QTY-03, API-01
+  - Acceptance Criteria:
+    - Deterministic score with fixed seed; percentile selection reproducible.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: 0
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/qty-05.md`
+
+## Api
+
+- [ ] **API-01 — HTTP Gateway REST/NDJSON**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Auth, CORS, quotas, error mapping.
+  - Dependencies: R-09, D-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-01.md`
+
+- [ ] **API-02 — WebSocket Bus**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Broadcast with backpressure policy.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-02.md`
+
+- [ ] **API-03 — NDJSON streaming**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Chunked responses with cancellation.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-03.md`
+
+- [ ] **API-04 — OpenAPI export from .lll**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Generate OpenAPI from schemas.
+  - Dependencies: D-05
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-04.md`
+
+- [ ] **API-10-1 — OpenAPI generators & tests #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-1.md`
+
+- [ ] **API-10-2 — OpenAPI generators & tests #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-2.md`
+
+- [ ] **API-10-3 — OpenAPI generators & tests #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-3.md`
+
+- [ ] **API-10-4 — OpenAPI generators & tests #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-4.md`
+
+- [ ] **API-10-5 — OpenAPI generators & tests #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-5.md`
+
+- [ ] **API-10-6 — OpenAPI generators & tests #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-6.md`
+
+- [ ] **API-10-7 — OpenAPI generators & tests #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-7.md`
+
+- [ ] **API-10-8 — OpenAPI generators & tests #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Roundtrip tests, examples, bundling.
+  - Dependencies: API-04
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-10-8.md`
+
+- [ ] **API-20-1 — Gateway hardening & middlewares #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-1.md`
+
+- [ ] **API-20-10 — Gateway hardening & middlewares #10**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-10.md`
+
+- [ ] **API-20-2 — Gateway hardening & middlewares #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-2.md`
+
+- [ ] **API-20-3 — Gateway hardening & middlewares #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-3.md`
+
+- [ ] **API-20-4 — Gateway hardening & middlewares #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-4.md`
+
+- [ ] **API-20-5 — Gateway hardening & middlewares #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-5.md`
+
+- [ ] **API-20-6 — Gateway hardening & middlewares #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-6.md`
+
+- [ ] **API-20-7 — Gateway hardening & middlewares #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-7.md`
+
+- [ ] **API-20-8 — Gateway hardening & middlewares #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-8.md`
+
+- [ ] **API-20-9 — Gateway hardening & middlewares #09**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: CORS, gzip, timeouts, retry headers.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-20-9.md`
+
+- [ ] **API-40 — Error model harmonization**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Error codes, problem+json, correlation ids.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-40.md`
+
+- [ ] **API-30 — NDJSON cancellation & resume**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Resumable streams with cursor tokens.
+  - Dependencies: API-03
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/api-30.md`
+
+- [ ] **WH-01 — Webhooks inbound**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Signature verification and retries.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/wh-01.md`
+
+- [ ] **WH-02 — Webhooks outbound**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Signing and retry policy.
+  - Dependencies: API-01
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/wh-02.md`
+
+- [ ] **WS-10-1 — WebSocket backpressure & QoS #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-1.md`
+
+- [ ] **WS-10-2 — WebSocket backpressure & QoS #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-2.md`
+
+- [ ] **WS-10-3 — WebSocket backpressure & QoS #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-3.md`
+
+- [ ] **WS-10-4 — WebSocket backpressure & QoS #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-4.md`
+
+- [ ] **WS-10-5 — WebSocket backpressure & QoS #05**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-5.md`
+
+- [ ] **WS-10-6 — WebSocket backpressure & QoS #06**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Buffers, drop policy, metrics.
+  - Dependencies: API-02
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-10-6.md`
+
+- [ ] **WS-20 — WS auth revalidation**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-api` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Periodic LLST re-check and downgrade on expiry.
+  - Dependencies: API-02, LLST-03
+  - Acceptance Criteria:
+    - AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.
+  - Success Metrics:
+    - latency_p95_ms: 15
+    - error_rate_max_pct: 0.5
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/ws-20.md`
+
+## Identity
+
+- [ ] **AUTH-01 — OIDC Discovery (Google)**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Well-known endpoints; JWKS fetch.
+  - Dependencies: R-09
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-01.md`
+
+- [ ] **AUTH-02 — Authorization Code + PKCE**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Browser login flow; state/nonce.
+  - Dependencies: AUTH-01
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-02.md`
+
+- [ ] **AUTH-03 — id_token validation**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: iss/aud/exp/nbf checks; clock skew.
+  - Dependencies: AUTH-01
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-03.md`
+
+- [ ] **LLID-01 — LLID mapping**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Map OIDC sub→LLID with tenant.
+  - Dependencies: AUTH-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llid-01.md`
+
+- [ ] **LLST-02 — LLST issuing**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Short-lived JWT with kid.
+  - Dependencies: R-09, LLID-01
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-02.md`
+
+- [ ] **AUTH-20 — Service accounts (LLST)**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Non-human tokens with scoped caps.
+  - Dependencies: LLST-02, P-05
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-20.md`
+
+- [ ] **AUTH-10-1 — Session UX & CLI login #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-1.md`
+
+- [ ] **AUTH-10-2 — Session UX & CLI login #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-2.md`
+
+- [ ] **AUTH-10-3 — Session UX & CLI login #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-3.md`
+
+- [ ] **AUTH-10-4 — Session UX & CLI login #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-4.md`
+
+- [ ] **AUTH-10-5 — Session UX & CLI login #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-5.md`
+
+- [ ] **AUTH-10-6 — Session UX & CLI login #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Device code flow for CLI, token cache.
+  - Dependencies: AUTH-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/auth-10-6.md`
+
+- [ ] **LLST-03 — LLST rotation/revocation**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rotation policy and revocation list.
+  - Dependencies: LLST-02
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-03.md`
+
+- [ ] **LLST-10-1 — LLST hygiene & rotation jobs #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rollover automation, stale token purge.
+  - Dependencies: LLST-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-10-1.md`
+
+- [ ] **LLST-10-2 — LLST hygiene & rotation jobs #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rollover automation, stale token purge.
+  - Dependencies: LLST-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-10-2.md`
+
+- [ ] **LLST-10-3 — LLST hygiene & rotation jobs #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rollover automation, stale token purge.
+  - Dependencies: LLST-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-10-3.md`
+
+- [ ] **LLST-10-4 — LLST hygiene & rotation jobs #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rollover automation, stale token purge.
+  - Dependencies: LLST-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-10-4.md`
+
+- [ ] **LLST-10-5 — LLST hygiene & rotation jobs #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Key rollover automation, stale token purge.
+  - Dependencies: LLST-03
+  - Acceptance Criteria:
+    - OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/llst-10-5.md`
+
+## Security
+
+- [ ] **SEC-10-1 — Security reviews & pen-test prep #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Kernel, auth, ledger, api surfaces.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - Threats documented; mitigations tested; no high severity findings open.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/sec-10-1.md`
+
+- [ ] **SEC-10-2 — Security reviews & pen-test prep #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Kernel, auth, ledger, api surfaces.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - Threats documented; mitigations tested; no high severity findings open.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/sec-10-2.md`
+
+- [ ] **SEC-10-3 — Security reviews & pen-test prep #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Kernel, auth, ledger, api surfaces.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - Threats documented; mitigations tested; no high severity findings open.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/sec-10-3.md`
+
+- [ ] **SEC-10-4 — Security reviews & pen-test prep #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Kernel, auth, ledger, api surfaces.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - Threats documented; mitigations tested; no high severity findings open.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/sec-10-4.md`
+
+- [ ] **SEC-10-5 — Security reviews & pen-test prep #05**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-security` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Kernel, auth, ledger, api surfaces.
+  - Dependencies: R-01
+  - Acceptance Criteria:
+    - Threats documented; mitigations tested; no high severity findings open.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/sec-10-5.md`
+
+## Observability
+
+- [ ] **O-01 — Metrics baseline**
+  - Milestone: `M0` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W0 ~ 2025-10-05`
+  - Description: Gateway/ledger/auth metrics + exporters.
+  - Dependencies: API-01, D-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-01.md`
+
+- [ ] **O-30 — Public counters endpoint**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Expose public counters per tenant.
+  - Dependencies: O-01, API-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-30.md`
+
+- [ ] **OBS-DIA-01 — Quality metrics**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: trajectory_quality/s, diamond_candidate/s, %qualified.
+  - Dependencies: QTY-02, O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/obs-dia-01.md`
+
+- [ ] **OBS-TRI-01 — Trajectory metrics**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Active/closed trajectories, closure time.
+  - Dependencies: TRI-03, O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/obs-tri-01.md`
+
+- [ ] **AUD-01 — Audit & exports assinados**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Signed NDJSON exports + manifest.
+  - Dependencies: D-01, R-10
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/aud-01.md`
+
+- [ ] **O-10-1 — Dashboards & alerts #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-1.md`
+
+- [ ] **O-10-2 — Dashboards & alerts #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-2.md`
+
+- [ ] **O-10-3 — Dashboards & alerts #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-3.md`
+
+- [ ] **O-10-4 — Dashboards & alerts #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-4.md`
+
+- [ ] **O-10-5 — Dashboards & alerts #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-5.md`
+
+- [ ] **O-10-6 — Dashboards & alerts #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-6.md`
+
+- [ ] **O-10-7 — Dashboards & alerts #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-7.md`
+
+- [ ] **O-10-8 — Dashboards & alerts #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: KPI panels, alert rules, runbook links.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-10-8.md`
+
+- [ ] **AUD-02 — Receipts browser**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Query & verify receipts with proofs.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/aud-02.md`
+
+- [ ] **O-20-1 — Tracepoints & profiling #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-1.md`
+
+- [ ] **O-20-2 — Tracepoints & profiling #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-2.md`
+
+- [ ] **O-20-3 — Tracepoints & profiling #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-3.md`
+
+- [ ] **O-20-4 — Tracepoints & profiling #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-4.md`
+
+- [ ] **O-20-5 — Tracepoints & profiling #05**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-5.md`
+
+- [ ] **O-20-6 — Tracepoints & profiling #06**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-observability` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Hot paths, sampling, percentiles.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Metrics exported; dashboards populated; alerts fire on synthetic incidents.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/o-20-6.md`
+
+## Export
+
+- [ ] **E-10-1 — Signed exports pipelines #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-1.md`
+
+- [ ] **E-10-2 — Signed exports pipelines #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-2.md`
+
+- [ ] **E-10-3 — Signed exports pipelines #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-3.md`
+
+- [ ] **E-10-4 — Signed exports pipelines #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-4.md`
+
+- [ ] **E-10-5 — Signed exports pipelines #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-5.md`
+
+- [ ] **E-10-6 — Signed exports pipelines #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: NDJSON manifests, signatures, chain-of-custody.
+  - Dependencies: AUD-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-10-6.md`
+
+- [ ] **E-20-1 — Snapshots & restore #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Periodic snapshots, integrity checks.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-20-1.md`
+
+- [ ] **E-20-2 — Snapshots & restore #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Periodic snapshots, integrity checks.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-20-2.md`
+
+- [ ] **E-20-3 — Snapshots & restore #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Periodic snapshots, integrity checks.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-20-3.md`
+
+- [ ] **E-20-4 — Snapshots & restore #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-data` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Periodic snapshots, integrity checks.
+  - Dependencies: D-01
+  - Acceptance Criteria:
+    - Exports signed; manifest includes hashes; verification tool passes.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/e-20-4.md`
+
+## Ops
+
+- [ ] **RUN-01 — Runbooks incident**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Auth incident, quotas, read-only mode.
+  - Dependencies: O-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-01.md`
+
+- [ ] **RUN-10-1 — Deploy scripts & IaC (dev→prod) #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-1.md`
+
+- [ ] **RUN-10-2 — Deploy scripts & IaC (dev→prod) #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-2.md`
+
+- [ ] **RUN-10-3 — Deploy scripts & IaC (dev→prod) #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-3.md`
+
+- [ ] **RUN-10-4 — Deploy scripts & IaC (dev→prod) #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-4.md`
+
+- [ ] **RUN-10-5 — Deploy scripts & IaC (dev→prod) #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-5.md`
+
+- [ ] **RUN-10-6 — Deploy scripts & IaC (dev→prod) #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-ops` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Env files, secrets, healthchecks.
+  - Dependencies: RUN-01
+  - Acceptance Criteria:
+    - Runbooks tested; rollout/rollback scripts validated; healthchecks green.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/run-10-6.md`
+
+## Docs
+
+- [ ] **DOC-01 — Docs & examples pack #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-01.md`
+
+- [ ] **DOC-02 — Docs & examples pack #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-02.md`
+
+- [ ] **DOC-03 — Docs & examples pack #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-03.md`
+
+- [ ] **DOC-04 — Docs & examples pack #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-04.md`
+
+- [ ] **DOC-05 — Docs & examples pack #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-05.md`
+
+- [ ] **DOC-06 — Docs & examples pack #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-06.md`
+
+- [ ] **DOC-07 — Docs & examples pack #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-07.md`
+
+- [ ] **DOC-08 — Docs & examples pack #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-08.md`
+
+- [ ] **DOC-09 — Docs & examples pack #09**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-09.md`
+
+- [ ] **DOC-10 — Docs & examples pack #10**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-10.md`
+
+- [ ] **DOC-11 — Docs & examples pack #11**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-11.md`
+
+- [ ] **DOC-12 — Docs & examples pack #12**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-12.md`
+
+- [ ] **DOC-13 — Docs & examples pack #13**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-13.md`
+
+- [ ] **DOC-14 — Docs & examples pack #14**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-14.md`
+
+- [ ] **DOC-15 — Docs & examples pack #15**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-15.md`
+
+- [ ] **DOC-16 — Docs & examples pack #16**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-16.md`
+
+- [ ] **DOC-17 — Docs & examples pack #17**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-17.md`
+
+- [ ] **DOC-18 — Docs & examples pack #18**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-18.md`
+
+- [ ] **DOC-19 — Docs & examples pack #19**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-19.md`
+
+- [ ] **DOC-20 — Docs & examples pack #20**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-20.md`
+
+- [ ] **DOC-21 — Docs & examples pack #21**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-21.md`
+
+- [ ] **DOC-22 — Docs & examples pack #22**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-22.md`
+
+- [ ] **DOC-23 — Docs & examples pack #23**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-23.md`
+
+- [ ] **DOC-24 — Docs & examples pack #24**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-24.md`
+
+- [ ] **DOC-25 — Docs & examples pack #25**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-25.md`
+
+- [ ] **DOC-26 — Docs & examples pack #26**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-26.md`
+
+- [ ] **DOC-27 — Docs & examples pack #27**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-27.md`
+
+- [ ] **DOC-28 — Docs & examples pack #28**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-28.md`
+
+- [ ] **DOC-29 — Docs & examples pack #29**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `3`
+  - Owner: `team-docs` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.
+  - Dependencies: API-04, AUD-01
+  - Acceptance Criteria:
+    - Examples compile; copyedited; links valid.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/doc-29.md`
+
+## Qa
+
+- [ ] **Q-03 — Shadow-run EVAL↔AOT**
+  - Milestone: `M1` · Priority: `P0` · MVP: `Yes` · Critical Path: `No` · Effort Points: `6`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W4 ~ 2025-11-02`
+  - Description: Check equivalence on corpus.
+  - Dependencies: L-19, L-20
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-03.md`
+
+- [ ] **Q-10-1 — Corpus synthetic generators #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-1.md`
+
+- [ ] **Q-10-10 — Corpus synthetic generators #10**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-10.md`
+
+- [ ] **Q-10-2 — Corpus synthetic generators #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-2.md`
+
+- [ ] **Q-10-3 — Corpus synthetic generators #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-3.md`
+
+- [ ] **Q-10-4 — Corpus synthetic generators #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-4.md`
+
+- [ ] **Q-10-5 — Corpus synthetic generators #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-5.md`
+
+- [ ] **Q-10-6 — Corpus synthetic generators #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-6.md`
+
+- [ ] **Q-10-7 — Corpus synthetic generators #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-7.md`
+
+- [ ] **Q-10-8 — Corpus synthetic generators #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-8.md`
+
+- [ ] **Q-10-9 — Corpus synthetic generators #09**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Parametric workloads and oracles.
+  - Dependencies: Q-03
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-10-9.md`
+
+- [ ] **Q-20-1 — E2E pipelines tests #01**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-1.md`
+
+- [ ] **Q-20-2 — E2E pipelines tests #02**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-2.md`
+
+- [ ] **Q-20-3 — E2E pipelines tests #03**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-3.md`
+
+- [ ] **Q-20-4 — E2E pipelines tests #04**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-4.md`
+
+- [ ] **Q-20-5 — E2E pipelines tests #05**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-5.md`
+
+- [ ] **Q-20-6 — E2E pipelines tests #06**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-6.md`
+
+- [ ] **Q-20-7 — E2E pipelines tests #07**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-7.md`
+
+- [ ] **Q-20-8 — E2E pipelines tests #08**
+  - Milestone: `M1` · Priority: `P1` · MVP: `No` · Critical Path: `No` · Effort Points: `8`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W5 ~ 2025-11-09`
+  - Description: Ingest→Ledger→Trajectory→Quality.
+  - Dependencies: D-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-20-8.md`
+
+- [ ] **Q-30-1 — Fuzzing & fault injection #01**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-1.md`
+
+- [ ] **Q-30-2 — Fuzzing & fault injection #02**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-2.md`
+
+- [ ] **Q-30-3 — Fuzzing & fault injection #03**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-3.md`
+
+- [ ] **Q-30-4 — Fuzzing & fault injection #04**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-4.md`
+
+- [ ] **Q-30-5 — Fuzzing & fault injection #05**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-5.md`
+
+- [ ] **Q-30-6 — Fuzzing & fault injection #06**
+  - Milestone: `M2` · Priority: `P2` · MVP: `No` · Critical Path: `No` · Effort Points: `13`
+  - Owner: `team-qa` · Status: `todo` · Timeline Hint: `W12 ~ 2025-12-28`
+  - Description: Sandbox escapes, malformed manifests.
+  - Dependencies: R-02
+  - Acceptance Criteria:
+    - Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.
+  - Success Metrics:
+    - latency_p95_ms: n/a
+    - error_rate_max_pct: n/a
+    - determinism_diffs: n/a
+  - Cost Estimate (USD): `0.009875` · Batch Estimate: `0.004938`
+  - Artifact: `artifacts/q-30-6.md`
