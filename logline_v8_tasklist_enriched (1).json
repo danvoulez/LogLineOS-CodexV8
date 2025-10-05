@@ -1,0 +1,6627 @@
+[
+  {
+    "code": "API-01",
+    "title": "HTTP Gateway REST/NDJSON",
+    "milestone": "M0",
+    "component": "api",
+    "description": "Auth, CORS, quotas, error mapping.",
+    "deps": [
+      "R-09",
+      "D-02"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-api",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/api-01.md"
+  },
+  {
+    "code": "API-10-1",
+    "title": "OpenAPI generators & tests #01",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-1.md"
+  },
+  {
+    "code": "API-20-1",
+    "title": "Gateway hardening & middlewares #01",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-1.md"
+  },
+  {
+    "code": "API-02",
+    "title": "WebSocket Bus",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Broadcast with backpressure policy.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-02.md"
+  },
+  {
+    "code": "API-10-2",
+    "title": "OpenAPI generators & tests #02",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-2.md"
+  },
+  {
+    "code": "API-20-2",
+    "title": "Gateway hardening & middlewares #02",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-2.md"
+  },
+  {
+    "code": "API-03",
+    "title": "NDJSON streaming",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Chunked responses with cancellation.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-03.md"
+  },
+  {
+    "code": "API-10-3",
+    "title": "OpenAPI generators & tests #03",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-3.md"
+  },
+  {
+    "code": "API-20-3",
+    "title": "Gateway hardening & middlewares #03",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-3.md"
+  },
+  {
+    "code": "API-04",
+    "title": "OpenAPI export from .lll",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Generate OpenAPI from schemas.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-04.md"
+  },
+  {
+    "code": "API-10-4",
+    "title": "OpenAPI generators & tests #04",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-4.md"
+  },
+  {
+    "code": "API-20-4",
+    "title": "Gateway hardening & middlewares #04",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-4.md"
+  },
+  {
+    "code": "API-10-5",
+    "title": "OpenAPI generators & tests #05",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-5.md"
+  },
+  {
+    "code": "API-20-5",
+    "title": "Gateway hardening & middlewares #05",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-5.md"
+  },
+  {
+    "code": "API-10-6",
+    "title": "OpenAPI generators & tests #06",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-6.md"
+  },
+  {
+    "code": "API-20-6",
+    "title": "Gateway hardening & middlewares #06",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-6.md"
+  },
+  {
+    "code": "API-10-7",
+    "title": "OpenAPI generators & tests #07",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-7.md"
+  },
+  {
+    "code": "API-20-7",
+    "title": "Gateway hardening & middlewares #07",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-7.md"
+  },
+  {
+    "code": "API-10-8",
+    "title": "OpenAPI generators & tests #08",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Roundtrip tests, examples, bundling.",
+    "deps": [
+      "API-04"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-10-8.md"
+  },
+  {
+    "code": "API-20-8",
+    "title": "Gateway hardening & middlewares #08",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-8.md"
+  },
+  {
+    "code": "API-20-9",
+    "title": "Gateway hardening & middlewares #09",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-9.md"
+  },
+  {
+    "code": "API-20-10",
+    "title": "Gateway hardening & middlewares #10",
+    "milestone": "M1",
+    "component": "api",
+    "description": "CORS, gzip, timeouts, retry headers.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-20-10.md"
+  },
+  {
+    "code": "API-30",
+    "title": "NDJSON cancellation & resume",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Resumable streams with cursor tokens.",
+    "deps": [
+      "API-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/api-30.md"
+  },
+  {
+    "code": "API-40",
+    "title": "Error model harmonization",
+    "milestone": "M1",
+    "component": "api",
+    "description": "Error codes, problem+json, correlation ids.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-api",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/api-40.md"
+  },
+  {
+    "code": "AUD-01",
+    "title": "Audit & exports assinados",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "Signed NDJSON exports + manifest.",
+    "deps": [
+      "D-01",
+      "R-10"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/aud-01.md"
+  },
+  {
+    "code": "AUD-02",
+    "title": "Receipts browser",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Query & verify receipts with proofs.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/aud-02.md"
+  },
+  {
+    "code": "AUTH-01",
+    "title": "OIDC Discovery (Google)",
+    "milestone": "M0",
+    "component": "identity",
+    "description": "Well-known endpoints; JWKS fetch.",
+    "deps": [
+      "R-09"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/auth-01.md"
+  },
+  {
+    "code": "AUTH-10-1",
+    "title": "Session UX & CLI login #01",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-1.md"
+  },
+  {
+    "code": "AUTH-02",
+    "title": "Authorization Code + PKCE",
+    "milestone": "M0",
+    "component": "identity",
+    "description": "Browser login flow; state/nonce.",
+    "deps": [
+      "AUTH-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/auth-02.md"
+  },
+  {
+    "code": "AUTH-10-2",
+    "title": "Session UX & CLI login #02",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-2.md"
+  },
+  {
+    "code": "AUTH-03",
+    "title": "id_token validation",
+    "milestone": "M0",
+    "component": "identity",
+    "description": "iss/aud/exp/nbf checks; clock skew.",
+    "deps": [
+      "AUTH-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/auth-03.md"
+  },
+  {
+    "code": "AUTH-10-3",
+    "title": "Session UX & CLI login #03",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-3.md"
+  },
+  {
+    "code": "AUTH-10-4",
+    "title": "Session UX & CLI login #04",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-4.md"
+  },
+  {
+    "code": "AUTH-10-5",
+    "title": "Session UX & CLI login #05",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-5.md"
+  },
+  {
+    "code": "AUTH-10-6",
+    "title": "Session UX & CLI login #06",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Device code flow for CLI, token cache.",
+    "deps": [
+      "AUTH-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/auth-10-6.md"
+  },
+  {
+    "code": "AUTH-20",
+    "title": "Service accounts (LLST)",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Non-human tokens with scoped caps.",
+    "deps": [
+      "LLST-02",
+      "P-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 6,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/auth-20.md"
+  },
+  {
+    "code": "CFG-01",
+    "title": "Tenant config model",
+    "milestone": "M0",
+    "component": "policy",
+    "description": "Per-tenant flags, quotas, policies.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/cfg-01.md"
+  },
+  {
+    "code": "CFG-QLT-01",
+    "title": "Quality policy per tenant",
+    "milestone": "M1",
+    "component": "quality",
+    "description": "Weights, min_score, percentile_target.",
+    "deps": [
+      "QTY-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-qlt-01.md"
+  },
+  {
+    "code": "CFG-FEAT-01",
+    "title": "Feature flags `features.trajectory`/`features.diamond`",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "Per-tenant toggles.",
+    "deps": [
+      "CFG-01",
+      "API-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/cfg-feat-01.md"
+  },
+  {
+    "code": "CFG-10-1",
+    "title": "Tenant config API & storage #01",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-1.md"
+  },
+  {
+    "code": "CFG-20-1",
+    "title": "Feature flag service #01",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "Evaluate flags per request/tenant.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-20-1.md"
+  },
+  {
+    "code": "CFG-PRF-01",
+    "title": "Perf guardrails for derived events",
+    "milestone": "M2",
+    "component": "policy",
+    "description": "Limit derived spans/min, shed load.",
+    "deps": [
+      "OBS-TRI-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-platform",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/cfg-prf-01.md"
+  },
+  {
+    "code": "CFG-10-2",
+    "title": "Tenant config API & storage #02",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-2.md"
+  },
+  {
+    "code": "CFG-20-2",
+    "title": "Feature flag service #02",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "Evaluate flags per request/tenant.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-20-2.md"
+  },
+  {
+    "code": "CFG-10-3",
+    "title": "Tenant config API & storage #03",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-3.md"
+  },
+  {
+    "code": "CFG-20-3",
+    "title": "Feature flag service #03",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "Evaluate flags per request/tenant.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-20-3.md"
+  },
+  {
+    "code": "CFG-10-4",
+    "title": "Tenant config API & storage #04",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-4.md"
+  },
+  {
+    "code": "CFG-20-4",
+    "title": "Feature flag service #04",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "Evaluate flags per request/tenant.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-20-4.md"
+  },
+  {
+    "code": "CFG-10-5",
+    "title": "Tenant config API & storage #05",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-5.md"
+  },
+  {
+    "code": "CFG-10-6",
+    "title": "Tenant config API & storage #06",
+    "milestone": "M1",
+    "component": "policy",
+    "description": "CRUD, versioning, audit.",
+    "deps": [
+      "CFG-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/cfg-10-6.md"
+  },
+  {
+    "code": "D-01",
+    "title": "Span Ledger v1",
+    "milestone": "M0",
+    "component": "data",
+    "description": "Append-only store with partitioning and receipts.",
+    "deps": [
+      "R-04"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-01.md"
+  },
+  {
+    "code": "D-01A",
+    "title": "Columnar projections (light)",
+    "milestone": "M2",
+    "component": "data",
+    "description": "Optional projections for analytics.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-data",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/d-01a.md"
+  },
+  {
+    "code": "D-10-1",
+    "title": "Canonical schema validators #01",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-1.md"
+  },
+  {
+    "code": "D-20-1",
+    "title": "Router policies & routes #01",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-1.md"
+  },
+  {
+    "code": "D-02",
+    "title": "Ingress Router",
+    "milestone": "M0",
+    "component": "data",
+    "description": "Route inputs to validators and ledger.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-02.md"
+  },
+  {
+    "code": "D-10-2",
+    "title": "Canonical schema validators #02",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-2.md"
+  },
+  {
+    "code": "D-20-2",
+    "title": "Router policies & routes #02",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-2.md"
+  },
+  {
+    "code": "D-10-3",
+    "title": "Canonical schema validators #03",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-3.md"
+  },
+  {
+    "code": "D-20-3",
+    "title": "Router policies & routes #03",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-3.md"
+  },
+  {
+    "code": "D-10-4",
+    "title": "Canonical schema validators #04",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-4.md"
+  },
+  {
+    "code": "D-20-4",
+    "title": "Router policies & routes #04",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-4.md"
+  },
+  {
+    "code": "D-05",
+    "title": "Validator Chain",
+    "milestone": "M0",
+    "component": "data",
+    "description": "Composable validators in .lll (canonical contract, schema, auth).",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-05.md"
+  },
+  {
+    "code": "D-10-5",
+    "title": "Canonical schema validators #05",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-5.md"
+  },
+  {
+    "code": "D-20-5",
+    "title": "Router policies & routes #05",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-5.md"
+  },
+  {
+    "code": "D-10-6",
+    "title": "Canonical schema validators #06",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-6.md"
+  },
+  {
+    "code": "D-20-6",
+    "title": "Router policies & routes #06",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-6.md"
+  },
+  {
+    "code": "D-10-7",
+    "title": "Canonical schema validators #07",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-7.md"
+  },
+  {
+    "code": "D-20-7",
+    "title": "Router policies & routes #07",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-7.md"
+  },
+  {
+    "code": "D-10-8",
+    "title": "Canonical schema validators #08",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-8.md"
+  },
+  {
+    "code": "D-20-8",
+    "title": "Router policies & routes #08",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Rate classes, priorities, exceptions.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-20-8.md"
+  },
+  {
+    "code": "D-10-9",
+    "title": "Canonical schema validators #09",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-9.md"
+  },
+  {
+    "code": "D-10-10",
+    "title": "Canonical schema validators #10",
+    "milestone": "M0",
+    "component": "data",
+    "description": "who/did/this/when/status/confirmed_by rules.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-data",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/d-10-10.md"
+  },
+  {
+    "code": "D-30",
+    "title": "PII redaction filters",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Configurable redaction before persistence.",
+    "deps": [
+      "D-05"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-30.md"
+  },
+  {
+    "code": "D-40",
+    "title": "Backpressure at router",
+    "milestone": "M1",
+    "component": "data",
+    "description": "Queue limits, drop/slow strategies.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Passes validator suite; append-only invariant preserved; receipts linked.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/d-40.md"
+  },
+  {
+    "code": "DOC-01",
+    "title": "Docs & examples pack #01",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-01.md"
+  },
+  {
+    "code": "DOC-02",
+    "title": "Docs & examples pack #02",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-02.md"
+  },
+  {
+    "code": "DOC-03",
+    "title": "Docs & examples pack #03",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-03.md"
+  },
+  {
+    "code": "DOC-04",
+    "title": "Docs & examples pack #04",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-04.md"
+  },
+  {
+    "code": "DOC-05",
+    "title": "Docs & examples pack #05",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-05.md"
+  },
+  {
+    "code": "DOC-06",
+    "title": "Docs & examples pack #06",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-06.md"
+  },
+  {
+    "code": "DOC-07",
+    "title": "Docs & examples pack #07",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-07.md"
+  },
+  {
+    "code": "DOC-08",
+    "title": "Docs & examples pack #08",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-08.md"
+  },
+  {
+    "code": "DOC-09",
+    "title": "Docs & examples pack #09",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-09.md"
+  },
+  {
+    "code": "DOC-10",
+    "title": "Docs & examples pack #10",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-10.md"
+  },
+  {
+    "code": "DOC-11",
+    "title": "Docs & examples pack #11",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-11.md"
+  },
+  {
+    "code": "DOC-12",
+    "title": "Docs & examples pack #12",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-12.md"
+  },
+  {
+    "code": "DOC-13",
+    "title": "Docs & examples pack #13",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-13.md"
+  },
+  {
+    "code": "DOC-14",
+    "title": "Docs & examples pack #14",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-14.md"
+  },
+  {
+    "code": "DOC-15",
+    "title": "Docs & examples pack #15",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-15.md"
+  },
+  {
+    "code": "DOC-16",
+    "title": "Docs & examples pack #16",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-16.md"
+  },
+  {
+    "code": "DOC-17",
+    "title": "Docs & examples pack #17",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-17.md"
+  },
+  {
+    "code": "DOC-18",
+    "title": "Docs & examples pack #18",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-18.md"
+  },
+  {
+    "code": "DOC-19",
+    "title": "Docs & examples pack #19",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-19.md"
+  },
+  {
+    "code": "DOC-20",
+    "title": "Docs & examples pack #20",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-20.md"
+  },
+  {
+    "code": "DOC-21",
+    "title": "Docs & examples pack #21",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-21.md"
+  },
+  {
+    "code": "DOC-22",
+    "title": "Docs & examples pack #22",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-22.md"
+  },
+  {
+    "code": "DOC-23",
+    "title": "Docs & examples pack #23",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-23.md"
+  },
+  {
+    "code": "DOC-24",
+    "title": "Docs & examples pack #24",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-24.md"
+  },
+  {
+    "code": "DOC-25",
+    "title": "Docs & examples pack #25",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-25.md"
+  },
+  {
+    "code": "DOC-26",
+    "title": "Docs & examples pack #26",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-26.md"
+  },
+  {
+    "code": "DOC-27",
+    "title": "Docs & examples pack #27",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-27.md"
+  },
+  {
+    "code": "DOC-28",
+    "title": "Docs & examples pack #28",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-28.md"
+  },
+  {
+    "code": "DOC-29",
+    "title": "Docs & examples pack #29",
+    "milestone": "M1",
+    "component": "docs",
+    "description": "Authoring ARCH-v8, ABIv1, MANIFEST, OPERATIONS, examples.",
+    "deps": [
+      "API-04",
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-docs",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Examples compile; copyedited; links valid.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/doc-29.md"
+  },
+  {
+    "code": "E-10-1",
+    "title": "Signed exports pipelines #01",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-1.md"
+  },
+  {
+    "code": "E-20-1",
+    "title": "Snapshots & restore #01",
+    "milestone": "M2",
+    "component": "export",
+    "description": "Periodic snapshots, integrity checks.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-data",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/e-20-1.md"
+  },
+  {
+    "code": "E-10-2",
+    "title": "Signed exports pipelines #02",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-2.md"
+  },
+  {
+    "code": "E-20-2",
+    "title": "Snapshots & restore #02",
+    "milestone": "M2",
+    "component": "export",
+    "description": "Periodic snapshots, integrity checks.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-data",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/e-20-2.md"
+  },
+  {
+    "code": "E-10-3",
+    "title": "Signed exports pipelines #03",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-3.md"
+  },
+  {
+    "code": "E-20-3",
+    "title": "Snapshots & restore #03",
+    "milestone": "M2",
+    "component": "export",
+    "description": "Periodic snapshots, integrity checks.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-data",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/e-20-3.md"
+  },
+  {
+    "code": "E-10-4",
+    "title": "Signed exports pipelines #04",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-4.md"
+  },
+  {
+    "code": "E-20-4",
+    "title": "Snapshots & restore #04",
+    "milestone": "M2",
+    "component": "export",
+    "description": "Periodic snapshots, integrity checks.",
+    "deps": [
+      "D-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-data",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/e-20-4.md"
+  },
+  {
+    "code": "E-10-5",
+    "title": "Signed exports pipelines #05",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-5.md"
+  },
+  {
+    "code": "E-10-6",
+    "title": "Signed exports pipelines #06",
+    "milestone": "M1",
+    "component": "export",
+    "description": "NDJSON manifests, signatures, chain-of-custody.",
+    "deps": [
+      "AUD-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-data",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Exports signed; manifest includes hashes; verification tool passes.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/e-10-6.md"
+  },
+  {
+    "code": "FEAT-CL-01",
+    "title": "Optional span_cluster pilot (flag)",
+    "milestone": "M2",
+    "component": "pipeline",
+    "description": "Alternate cluster linker under features.cluster.",
+    "deps": [
+      "TRI-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-platform",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic derivation; idempotent re-runs; throughput baseline met.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.cluster"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/feat-cl-01.md"
+  },
+  {
+    "code": "L-01",
+    "title": "Grammar (EBNF)",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Formalize .lll grammar.",
+    "deps": [],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-01.md"
+  },
+  {
+    "code": "L-30-1",
+    "title": "Std library primitives #01",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-1.md"
+  },
+  {
+    "code": "L-40-1",
+    "title": "Error model & diagnostics #01",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-1.md"
+  },
+  {
+    "code": "L-50-1",
+    "title": "Package manager enhancements #01",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-1.md"
+  },
+  {
+    "code": "L-02",
+    "title": "Semantics reference",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Types, evaluation rules, errors.",
+    "deps": [
+      "L-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-02.md"
+  },
+  {
+    "code": "L-30-2",
+    "title": "Std library primitives #02",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-2.md"
+  },
+  {
+    "code": "L-40-2",
+    "title": "Error model & diagnostics #02",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-2.md"
+  },
+  {
+    "code": "L-50-2",
+    "title": "Package manager enhancements #02",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-2.md"
+  },
+  {
+    "code": "L-03",
+    "title": "Parser",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "ANTLR/hand-rolled parser to AST.",
+    "deps": [
+      "L-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-03.md"
+  },
+  {
+    "code": "L-30-3",
+    "title": "Std library primitives #03",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-3.md"
+  },
+  {
+    "code": "L-40-3",
+    "title": "Error model & diagnostics #03",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-3.md"
+  },
+  {
+    "code": "L-50-3",
+    "title": "Package manager enhancements #03",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-3.md"
+  },
+  {
+    "code": "L-04",
+    "title": "Type checker",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Type inference/validation.",
+    "deps": [
+      "L-02",
+      "L-03"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-04.md"
+  },
+  {
+    "code": "L-30-4",
+    "title": "Std library primitives #04",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-4.md"
+  },
+  {
+    "code": "L-40-4",
+    "title": "Error model & diagnostics #04",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-4.md"
+  },
+  {
+    "code": "L-50-4",
+    "title": "Package manager enhancements #04",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-4.md"
+  },
+  {
+    "code": "L-30-5",
+    "title": "Std library primitives #05",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-5.md"
+  },
+  {
+    "code": "L-40-5",
+    "title": "Error model & diagnostics #05",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-5.md"
+  },
+  {
+    "code": "L-50-5",
+    "title": "Package manager enhancements #05",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-5.md"
+  },
+  {
+    "code": "L-06",
+    "title": "IR core",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Lowering from AST; SSA-like if needed.",
+    "deps": [
+      "L-04"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-06.md"
+  },
+  {
+    "code": "L-30-6",
+    "title": "Std library primitives #06",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-6.md"
+  },
+  {
+    "code": "L-40-6",
+    "title": "Error model & diagnostics #06",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Pretty errors, codes, hints.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-40-6.md"
+  },
+  {
+    "code": "L-50-6",
+    "title": "Package manager enhancements #06",
+    "milestone": "M2",
+    "component": "toolchain",
+    "description": "Lockfile, reproducible builds, cache.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-compiler",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/l-50-6.md"
+  },
+  {
+    "code": "L-30-7",
+    "title": "Std library primitives #07",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-7.md"
+  },
+  {
+    "code": "L-30-8",
+    "title": "Std library primitives #08",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-8.md"
+  },
+  {
+    "code": "L-30-9",
+    "title": "Std library primitives #09",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-9.md"
+  },
+  {
+    "code": "L-30-10",
+    "title": "Std library primitives #10",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Collections, math, datetime, crypto adapters.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-30-10.md"
+  },
+  {
+    "code": "L-19",
+    "title": "AOT-WASM backend",
+    "milestone": "M1",
+    "component": "toolchain",
+    "description": "Emit WASM module from IR.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-compiler",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/l-19.md"
+  },
+  {
+    "code": "L-20",
+    "title": "EVAL engine",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Direct interpreter for IR.",
+    "deps": [
+      "L-06"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-20.md"
+  },
+  {
+    "code": "L-22",
+    "title": "CLI: loglinec/loglinerun",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Build & run toolchain; packaging .lllb.",
+    "deps": [
+      "L-06",
+      "L-20"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-22.md"
+  },
+  {
+    "code": "L-24",
+    "title": "Manifest generator (.lllb)",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "Create manifests with caps_allow and signatures.",
+    "deps": [
+      "L-22"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/l-24.md"
+  },
+  {
+    "code": "L-25",
+    "title": "Sign/Verify artifacts",
+    "milestone": "M0",
+    "component": "toolchain",
+    "description": "ed25519 signing & verification.",
+    "deps": [
+      "L-24",
+      "R-06"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-compiler",
+    "effort_points": 5,
+    "risk_level": "low",
+    "acceptance_criteria": "- Compiles sample .lll corpus; roundtrip tests green; errors include code and span location.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W1 ~ 2025-10-12",
+    "artifact_path": "artifacts/l-25.md"
+  },
+  {
+    "code": "LLID-01",
+    "title": "LLID mapping",
+    "milestone": "M0",
+    "component": "identity",
+    "description": "Map OIDC sub→LLID with tenant.",
+    "deps": [
+      "AUTH-03"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 3,
+    "risk_level": "med",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/llid-01.md"
+  },
+  {
+    "code": "LLST-10-1",
+    "title": "LLST hygiene & rotation jobs #01",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rollover automation, stale token purge.",
+    "deps": [
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-10-1.md"
+  },
+  {
+    "code": "LLST-02",
+    "title": "LLST issuing",
+    "milestone": "M0",
+    "component": "identity",
+    "description": "Short-lived JWT with kid.",
+    "deps": [
+      "R-09",
+      "LLID-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-security",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/llst-02.md"
+  },
+  {
+    "code": "LLST-10-2",
+    "title": "LLST hygiene & rotation jobs #02",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rollover automation, stale token purge.",
+    "deps": [
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-10-2.md"
+  },
+  {
+    "code": "LLST-03",
+    "title": "LLST rotation/revocation",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rotation policy and revocation list.",
+    "deps": [
+      "LLST-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-03.md"
+  },
+  {
+    "code": "LLST-10-3",
+    "title": "LLST hygiene & rotation jobs #03",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rollover automation, stale token purge.",
+    "deps": [
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-10-3.md"
+  },
+  {
+    "code": "LLST-10-4",
+    "title": "LLST hygiene & rotation jobs #04",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rollover automation, stale token purge.",
+    "deps": [
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-10-4.md"
+  },
+  {
+    "code": "LLST-10-5",
+    "title": "LLST hygiene & rotation jobs #05",
+    "milestone": "M1",
+    "component": "identity",
+    "description": "Key rollover automation, stale token purge.",
+    "deps": [
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-security",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- OIDC/JWT flows verified; key rotation tested; token TTL and revocation respected.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/llst-10-5.md"
+  },
+  {
+    "code": "O-01",
+    "title": "Metrics baseline",
+    "milestone": "M0",
+    "component": "observability",
+    "description": "Gateway/ledger/auth metrics + exporters.",
+    "deps": [
+      "API-01",
+      "D-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-observability",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/o-01.md"
+  },
+  {
+    "code": "O-10-1",
+    "title": "Dashboards & alerts #01",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-1.md"
+  },
+  {
+    "code": "O-20-1",
+    "title": "Tracepoints & profiling #01",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-1.md"
+  },
+  {
+    "code": "O-10-2",
+    "title": "Dashboards & alerts #02",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-2.md"
+  },
+  {
+    "code": "O-20-2",
+    "title": "Tracepoints & profiling #02",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-2.md"
+  },
+  {
+    "code": "O-10-3",
+    "title": "Dashboards & alerts #03",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-3.md"
+  },
+  {
+    "code": "O-20-3",
+    "title": "Tracepoints & profiling #03",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-3.md"
+  },
+  {
+    "code": "O-10-4",
+    "title": "Dashboards & alerts #04",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-4.md"
+  },
+  {
+    "code": "O-20-4",
+    "title": "Tracepoints & profiling #04",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-4.md"
+  },
+  {
+    "code": "O-10-5",
+    "title": "Dashboards & alerts #05",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-5.md"
+  },
+  {
+    "code": "O-20-5",
+    "title": "Tracepoints & profiling #05",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-5.md"
+  },
+  {
+    "code": "O-10-6",
+    "title": "Dashboards & alerts #06",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-6.md"
+  },
+  {
+    "code": "O-20-6",
+    "title": "Tracepoints & profiling #06",
+    "milestone": "M2",
+    "component": "observability",
+    "description": "Hot paths, sampling, percentiles.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-observability",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/o-20-6.md"
+  },
+  {
+    "code": "O-10-7",
+    "title": "Dashboards & alerts #07",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-7.md"
+  },
+  {
+    "code": "O-10-8",
+    "title": "Dashboards & alerts #08",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "KPI panels, alert rules, runbook links.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-observability",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/o-10-8.md"
+  },
+  {
+    "code": "O-30",
+    "title": "Public counters endpoint",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "Expose public counters per tenant.",
+    "deps": [
+      "O-01",
+      "API-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-observability",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/o-30.md"
+  },
+  {
+    "code": "OBS-TRI-01",
+    "title": "Trajectory metrics",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "Active/closed trajectories, closure time.",
+    "deps": [
+      "TRI-03",
+      "O-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-observability",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/obs-tri-01.md"
+  },
+  {
+    "code": "OBS-DIA-01",
+    "title": "Quality metrics",
+    "milestone": "M1",
+    "component": "observability",
+    "description": "trajectory_quality/s, diamond_candidate/s, %qualified.",
+    "deps": [
+      "QTY-02",
+      "O-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-observability",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Metrics exported; dashboards populated; alerts fire on synthetic incidents.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/obs-dia-01.md"
+  },
+  {
+    "code": "P-04",
+    "title": "Capabilities policy",
+    "milestone": "M0",
+    "component": "policy",
+    "description": ".lll gating rules per hostcall id.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/p-04.md"
+  },
+  {
+    "code": "P-05",
+    "title": "RBAC→Capabilities",
+    "milestone": "M0",
+    "component": "policy",
+    "description": "Map roles to capabilities per tenant.",
+    "deps": [
+      "P-04",
+      "R-09"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 3,
+    "risk_level": "low",
+    "acceptance_criteria": "- Policy toggles evaluated per-tenant; deny-by-default verified; audit trail present.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/p-05.md"
+  },
+  {
+    "code": "Q-10-1",
+    "title": "Corpus synthetic generators #01",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-1.md"
+  },
+  {
+    "code": "Q-20-1",
+    "title": "E2E pipelines tests #01",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-1.md"
+  },
+  {
+    "code": "Q-30-1",
+    "title": "Fuzzing & fault injection #01",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-1.md"
+  },
+  {
+    "code": "Q-10-2",
+    "title": "Corpus synthetic generators #02",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-2.md"
+  },
+  {
+    "code": "Q-20-2",
+    "title": "E2E pipelines tests #02",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-2.md"
+  },
+  {
+    "code": "Q-30-2",
+    "title": "Fuzzing & fault injection #02",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-2.md"
+  },
+  {
+    "code": "Q-03",
+    "title": "Shadow-run EVAL↔AOT",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Check equivalence on corpus.",
+    "deps": [
+      "L-19",
+      "L-20"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-qa",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/q-03.md"
+  },
+  {
+    "code": "Q-10-3",
+    "title": "Corpus synthetic generators #03",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-3.md"
+  },
+  {
+    "code": "Q-20-3",
+    "title": "E2E pipelines tests #03",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-3.md"
+  },
+  {
+    "code": "Q-30-3",
+    "title": "Fuzzing & fault injection #03",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-3.md"
+  },
+  {
+    "code": "Q-10-4",
+    "title": "Corpus synthetic generators #04",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-4.md"
+  },
+  {
+    "code": "Q-20-4",
+    "title": "E2E pipelines tests #04",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-4.md"
+  },
+  {
+    "code": "Q-30-4",
+    "title": "Fuzzing & fault injection #04",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-4.md"
+  },
+  {
+    "code": "Q-10-5",
+    "title": "Corpus synthetic generators #05",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-5.md"
+  },
+  {
+    "code": "Q-20-5",
+    "title": "E2E pipelines tests #05",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-5.md"
+  },
+  {
+    "code": "Q-30-5",
+    "title": "Fuzzing & fault injection #05",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-5.md"
+  },
+  {
+    "code": "Q-10-6",
+    "title": "Corpus synthetic generators #06",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-6.md"
+  },
+  {
+    "code": "Q-20-6",
+    "title": "E2E pipelines tests #06",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-6.md"
+  },
+  {
+    "code": "Q-30-6",
+    "title": "Fuzzing & fault injection #06",
+    "milestone": "M2",
+    "component": "qa",
+    "description": "Sandbox escapes, malformed manifests.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-qa",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/q-30-6.md"
+  },
+  {
+    "code": "Q-10-7",
+    "title": "Corpus synthetic generators #07",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-7.md"
+  },
+  {
+    "code": "Q-20-7",
+    "title": "E2E pipelines tests #07",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-7.md"
+  },
+  {
+    "code": "Q-10-8",
+    "title": "Corpus synthetic generators #08",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-8.md"
+  },
+  {
+    "code": "Q-20-8",
+    "title": "E2E pipelines tests #08",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Ingest→Ledger→Trajectory→Quality.",
+    "deps": [
+      "D-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-20-8.md"
+  },
+  {
+    "code": "Q-10-9",
+    "title": "Corpus synthetic generators #09",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-9.md"
+  },
+  {
+    "code": "Q-10-10",
+    "title": "Corpus synthetic generators #10",
+    "milestone": "M1",
+    "component": "qa",
+    "description": "Parametric workloads and oracles.",
+    "deps": [
+      "Q-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-qa",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Automated suites run in CI; coverage thresholds met; shadow-run diffs = 0.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/q-10-10.md"
+  },
+  {
+    "code": "QTY-01",
+    "title": "trajectory_quality_score.lll",
+    "milestone": "M1",
+    "component": "quality",
+    "description": "Compute score: mass+persistence+verification.",
+    "deps": [
+      "TRI-02",
+      "TRI-03"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/qty-01.md"
+  },
+  {
+    "code": "QTY-02",
+    "title": "quality_meter_v1_1.lll",
+    "milestone": "M1",
+    "component": "quality",
+    "description": "Filter by percentile/threshold; emit diamond_candidate.",
+    "deps": [
+      "QTY-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/qty-02.md"
+  },
+  {
+    "code": "QTY-03",
+    "title": "dryrun_simulator.lll + CLI `ll quality simulate`",
+    "milestone": "M1",
+    "component": "quality",
+    "description": "Dry-run scoring & filtering for debug.",
+    "deps": [
+      "QTY-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "high",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/qty-03.md"
+  },
+  {
+    "code": "QTY-04",
+    "title": "Percentile calculator (streaming)",
+    "milestone": "M1",
+    "component": "quality",
+    "description": "Approximate quantiles for real-time filtering.",
+    "deps": [
+      "QTY-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-platform",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/qty-04.md"
+  },
+  {
+    "code": "QTY-05",
+    "title": "Quality dry-run API endpoint",
+    "milestone": "M2",
+    "component": "quality",
+    "description": "Expose dry-run via REST/WS for tooling.",
+    "deps": [
+      "QTY-03",
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-platform",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic score with fixed seed; percentile selection reproducible.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory",
+      "features.diamond"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/qty-05.md"
+  },
+  {
+    "code": "R-01",
+    "title": "TCB spec & threat model",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Boundary of trusted code; attack surface; threat scenarios; acceptance criteria.",
+    "deps": [],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-01.md"
+  },
+  {
+    "code": "R-02",
+    "title": "Loader/Sandbox (.lllb)",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Validate signatures, ABI version, caps_allow; deny-by-default.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-02.md"
+  },
+  {
+    "code": "R-03",
+    "title": "Hostcalls ABI v1",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Define wire contracts and capability gating for ledger, kv, env, http, ws, crypto.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-03.md"
+  },
+  {
+    "code": "R-04",
+    "title": "Kernel: ledger.append",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "High-throughput append-only implementation with receipts.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-04.md"
+  },
+  {
+    "code": "R-05",
+    "title": "Kernel: kv.get/set",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Insert-only semantics where applicable; namespaced by tenant.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 5,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W1 ~ 2025-10-12",
+    "artifact_path": "artifacts/r-05.md"
+  },
+  {
+    "code": "R-06",
+    "title": "Kernel: ed25519 verify (batch)",
+    "milestone": "M1",
+    "component": "runtime",
+    "description": "Batch verification support; constant-time primitives.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-runtime",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/r-06.md"
+  },
+  {
+    "code": "R-07",
+    "title": "rtlib_wasm (AOT trampoline)",
+    "milestone": "M1",
+    "component": "runtime",
+    "description": "Minimal runtime for WASM AOT path bridging hostcalls.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-runtime",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/r-07.md"
+  },
+  {
+    "code": "R-08",
+    "title": "Rate-limit/quotas enforcer (TCB)",
+    "milestone": "M1",
+    "component": "runtime",
+    "description": "Token bucket/sliding window hooks exposed to .lll policies.",
+    "deps": [
+      "R-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-runtime",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/r-08.md"
+  },
+  {
+    "code": "R-09",
+    "title": "OIDC/JWT core (LLST/JWKS)",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Google-only OIDC; LLST issuing/rotation; JWKS cache.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-09.md"
+  },
+  {
+    "code": "R-10",
+    "title": "Audit receipts writer",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Append receipts and bind to operations with ids.",
+    "deps": [
+      "R-04"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-10.md"
+  },
+  {
+    "code": "R-11",
+    "title": "Sandbox syscall denylist",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Harden default deny syscalls.",
+    "deps": [
+      "R-02"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-11.md"
+  },
+  {
+    "code": "R-12",
+    "title": "Resource limits (mem/cpu/wall)",
+    "milestone": "M0",
+    "component": "runtime",
+    "description": "Quota per tenant and per run.",
+    "deps": [
+      "R-02",
+      "R-08"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 3,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W0 ~ 2025-10-05",
+    "artifact_path": "artifacts/r-12.md"
+  },
+  {
+    "code": "R-13",
+    "title": "Determinism rules (AOT vs EVAL)",
+    "milestone": "M1",
+    "component": "runtime",
+    "description": "No clock/rand unless provided by env/hostcall.",
+    "deps": [
+      "L-19",
+      "L-20"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-runtime",
+    "effort_points": 6,
+    "risk_level": "high",
+    "acceptance_criteria": "- All ABI/limits enforced; unit & integration tests; benchmarks meet target.\n- Security checks pass; receipts emitted when applicable.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/r-13.md"
+  },
+  {
+    "code": "RUN-01",
+    "title": "Runbooks incident",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Auth incident, quotas, read-only mode.",
+    "deps": [
+      "O-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-01.md"
+  },
+  {
+    "code": "RUN-10-1",
+    "title": "Deploy scripts & IaC (dev→prod) #01",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-1.md"
+  },
+  {
+    "code": "RUN-10-2",
+    "title": "Deploy scripts & IaC (dev→prod) #02",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-2.md"
+  },
+  {
+    "code": "RUN-10-3",
+    "title": "Deploy scripts & IaC (dev→prod) #03",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-3.md"
+  },
+  {
+    "code": "RUN-10-4",
+    "title": "Deploy scripts & IaC (dev→prod) #04",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-4.md"
+  },
+  {
+    "code": "RUN-10-5",
+    "title": "Deploy scripts & IaC (dev→prod) #05",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-5.md"
+  },
+  {
+    "code": "RUN-10-6",
+    "title": "Deploy scripts & IaC (dev→prod) #06",
+    "milestone": "M1",
+    "component": "ops",
+    "description": "Env files, secrets, healthchecks.",
+    "deps": [
+      "RUN-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P1",
+    "owner": "team-ops",
+    "effort_points": 8,
+    "risk_level": "low",
+    "acceptance_criteria": "- Runbooks tested; rollout/rollback scripts validated; healthchecks green.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W5 ~ 2025-11-09",
+    "artifact_path": "artifacts/run-10-6.md"
+  },
+  {
+    "code": "SEC-10-1",
+    "title": "Security reviews & pen-test prep #01",
+    "milestone": "M2",
+    "component": "security",
+    "description": "Kernel, auth, ledger, api surfaces.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-security",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Threats documented; mitigations tested; no high severity findings open.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/sec-10-1.md"
+  },
+  {
+    "code": "SEC-10-2",
+    "title": "Security reviews & pen-test prep #02",
+    "milestone": "M2",
+    "component": "security",
+    "description": "Kernel, auth, ledger, api surfaces.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-security",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Threats documented; mitigations tested; no high severity findings open.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/sec-10-2.md"
+  },
+  {
+    "code": "SEC-10-3",
+    "title": "Security reviews & pen-test prep #03",
+    "milestone": "M2",
+    "component": "security",
+    "description": "Kernel, auth, ledger, api surfaces.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-security",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Threats documented; mitigations tested; no high severity findings open.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/sec-10-3.md"
+  },
+  {
+    "code": "SEC-10-4",
+    "title": "Security reviews & pen-test prep #04",
+    "milestone": "M2",
+    "component": "security",
+    "description": "Kernel, auth, ledger, api surfaces.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-security",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Threats documented; mitigations tested; no high severity findings open.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/sec-10-4.md"
+  },
+  {
+    "code": "SEC-10-5",
+    "title": "Security reviews & pen-test prep #05",
+    "milestone": "M2",
+    "component": "security",
+    "description": "Kernel, auth, ledger, api surfaces.",
+    "deps": [
+      "R-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-security",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Threats documented; mitigations tested; no high severity findings open.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/sec-10-5.md"
+  },
+  {
+    "code": "TRI-01",
+    "title": "Trajectory Linker",
+    "milestone": "M1",
+    "component": "pipeline",
+    "description": "Chain spans by `this`+time window; create edges.",
+    "deps": [
+      "D-02",
+      "D-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic derivation; idempotent re-runs; throughput baseline met.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/tri-01.md"
+  },
+  {
+    "code": "TRI-02",
+    "title": "Emit trajectory_edge",
+    "milestone": "M1",
+    "component": "pipeline",
+    "description": "Derived span for edge open/continue.",
+    "deps": [
+      "TRI-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic derivation; idempotent re-runs; throughput baseline met.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": true,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/tri-02.md"
+  },
+  {
+    "code": "TRI-03",
+    "title": "Auto close trajectory (trajectory_closed)",
+    "milestone": "M1",
+    "component": "pipeline",
+    "description": "Timeout/rule-based close.",
+    "deps": [
+      "TRI-01"
+    ],
+    "mvp": true,
+    "status": "todo",
+    "priority": "P0",
+    "owner": "team-platform",
+    "effort_points": 6,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic derivation; idempotent re-runs; throughput baseline met.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W4 ~ 2025-11-02",
+    "artifact_path": "artifacts/tri-03.md"
+  },
+  {
+    "code": "TRI-05",
+    "title": "Trajectory reprocessor (on-demand)",
+    "milestone": "M2",
+    "component": "pipeline",
+    "description": "Rebuild edges/close for a range; idempotent.",
+    "deps": [
+      "TRI-01",
+      "TRI-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-platform",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- Deterministic derivation; idempotent re-runs; throughput baseline met.",
+    "success_metrics": {
+      "latency_p95_ms": null,
+      "error_rate_max_pct": null,
+      "determinism_diffs": 0
+    },
+    "feature_flags": [
+      "features.trajectory"
+    ],
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/tri-05.md"
+  },
+  {
+    "code": "WH-01",
+    "title": "Webhooks inbound",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Signature verification and retries.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/wh-01.md"
+  },
+  {
+    "code": "WH-02",
+    "title": "Webhooks outbound",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Signing and retry policy.",
+    "deps": [
+      "API-01"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/wh-02.md"
+  },
+  {
+    "code": "WS-10-1",
+    "title": "WebSocket backpressure & QoS #01",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-1.md"
+  },
+  {
+    "code": "WS-10-2",
+    "title": "WebSocket backpressure & QoS #02",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-2.md"
+  },
+  {
+    "code": "WS-10-3",
+    "title": "WebSocket backpressure & QoS #03",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-3.md"
+  },
+  {
+    "code": "WS-10-4",
+    "title": "WebSocket backpressure & QoS #04",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-4.md"
+  },
+  {
+    "code": "WS-10-5",
+    "title": "WebSocket backpressure & QoS #05",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-5.md"
+  },
+  {
+    "code": "WS-10-6",
+    "title": "WebSocket backpressure & QoS #06",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Buffers, drop policy, metrics.",
+    "deps": [
+      "API-02"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "low",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-10-6.md"
+  },
+  {
+    "code": "WS-20",
+    "title": "WS auth revalidation",
+    "milestone": "M2",
+    "component": "api",
+    "description": "Periodic LLST re-check and downgrade on expiry.",
+    "deps": [
+      "API-02",
+      "LLST-03"
+    ],
+    "mvp": false,
+    "status": "todo",
+    "priority": "P2",
+    "owner": "team-api",
+    "effort_points": 13,
+    "risk_level": "high",
+    "acceptance_criteria": "- AuthN/Z enforced; OpenAPI generated; 2xx/4xx/5xx mapping verified; load test baseline.",
+    "success_metrics": {
+      "latency_p95_ms": 15,
+      "error_rate_max_pct": 0.5,
+      "determinism_diffs": null
+    },
+    "cost_estimate_usd": 0.009875,
+    "batch_estimate_usd": 0.004938,
+    "critical_path": false,
+    "timeline_hint": "W12 ~ 2025-12-28",
+    "artifact_path": "artifacts/ws-20.md"
+  }
+]
